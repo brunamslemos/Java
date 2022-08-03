@@ -1,13 +1,11 @@
  package poo.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class Cliente {
-
-	public Integer código;
-	public String nome;
-	public String cpf;
+public class Cliente extends Pessoa{
 	
+	public String numCartao;
 	private List<Endereço> enderecos;
 	
 	public void adicionaEndereco(Endereço endereco) {
@@ -23,10 +21,12 @@ public class Cliente {
 	}
 	
 	// Quando for entrar, ele vai verificar se o atributo é nulo ou não, e se não for, ele adiciona 
-	private List<Endereco> getEnderecos(){
+	// 
+	private List<Endereço> getEnderecos(){
 		if (enderecos == null) {
-			enderecos = new ArrayList<Endereco>();
+			enderecos = new ArrayList<Endereço>();
 		}
 		return enderecos;
 	}
+		
 }
