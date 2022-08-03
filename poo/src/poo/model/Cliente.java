@@ -3,12 +3,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cliente {
-
-	public Integer código;
-	public String nome;
-	public String cpf;
+public class Cliente extends Pessoa{
 	
+	public String numCartao;
 	private List<Endereço> enderecos;
 	
 	public void adicionaEndereco(Endereço endereco) {
@@ -30,4 +27,5 @@ public class Cliente {
 		}
 		return enderecos;
 	}
+		
 }
