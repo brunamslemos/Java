@@ -26,10 +26,10 @@ public class Questão_1 {
 			
 		}
 		
-		public static float calcularTercoFerias() {
-			float tercoFerias = salario / 3;
+		public static float calcularFerias() {
+			float ferias = salario / 3;
 
-			return tercoFerias;
+			return ferias;
 		}
 
 		public static float calcularINSS() {
@@ -71,8 +71,8 @@ public class Questão_1 {
 		public static float calculaSalarioBrutoAnual() {
 			float salarioAnual = salario * 12;
 			float decimoTerceiro = salario;
-			float tercoFerias = calcularTercoFerias();
-			float salarioBrutoAnual = salarioAnual + decimoTerceiro + tercoFerias;
+			float feriasFinal = calcularFerias();
+			float salarioBrutoAnual = salarioAnual + decimoTerceiro + feriasFinal;
 		
 			System.out.printf("O valor do seu salario bruto anual e: R$ %.2f\n", salarioBrutoAnual);
 			return salarioBrutoAnual;
