@@ -9,10 +9,10 @@ public class Questão_1 {
 		
 		public static void main(String[] args) {
 			setSalario();
-			calculaSalarioBrutoAnual();
-			calculaTotalDescontoInss();
-			calculaSalarioLiquidoAnual();
-			
+			saidaSalarioBrutoAnual();
+			saidaTotalDescontoInss();
+			saidaSalarioLiquidoAnual();
+						
 			scan.close();
 		}
 		
@@ -22,8 +22,7 @@ public class Questão_1 {
 				salario = scan.nextFloat();
 				
 				} while (salario<=0); 
-				
-			
+					
 		}
 		
 		public static float calcularFerias() {
@@ -73,17 +72,17 @@ public class Questão_1 {
 			float decimoTerceiro = salario;
 			float feriasFinal = calcularFerias();
 			float salarioBrutoAnual = salarioAnual + decimoTerceiro + feriasFinal;
-		
-			System.out.printf("O valor do seu salario bruto anual e: R$ %.2f\n", salarioBrutoAnual);
+			
 			return salarioBrutoAnual;
+		
 		}
 		
 		public static float calculaTotalDescontoInss() {
 			float inssCalculado = calcularINSS ();
 			float descontoTotalInss = inssCalculado * 12;
 			
-			System.out.printf("O valor do desconto anual do INSS e de: R$ %.2f\n", descontoTotalInss);
 			return descontoTotalInss;
+			
 		}
 		
 		public static float calculaSalarioLiquidoAnual() {
@@ -91,10 +90,23 @@ public class Questão_1 {
 			float descontoTotalInss = calculaTotalDescontoInss();
 			float salarioLiquidoAnual = salarioBrutoAnual - descontoTotalInss;
 			
-			System.out.printf("O valor do seu salário líquido anual e: R$ %.2f\n", salarioLiquidoAnual);
 			return salarioLiquidoAnual;
+			
 		}
 		
+		public static void saidaSalarioBrutoAnual() {
+			float saidaBruto = calculaSalarioBrutoAnual();
+			System.out.printf("O valor do seu salario bruto anual e: R$ %.2f\n", saidaBruto);
+		}
 		
+		public static void saidaTotalDescontoInss() {
+			float saidaInss = calculaTotalDescontoInss();
+			System.out.printf("O valor do desconto anual do INSS e de: R$ %.2f\n", saidaInss);
+		}
+		
+		public static void saidaSalarioLiquidoAnual () {
+			float saidaLiquido = calculaSalarioLiquidoAnual();
+			System.out.printf("O valor do seu salário líquido anual e: R$ %.2f\n", saidaLiquido);
+		}
 }
 	
