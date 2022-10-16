@@ -79,7 +79,7 @@ public class Questão_1 {
 		
 		public static float calculaTotalDescontoInss() {
 			float inssCalculado = calcularINSS ();
-			float descontoTotalInss = inssCalculado * 12;
+			float descontoTotalInss = inssCalculado * 13;
 			
 			return descontoTotalInss;
 			
