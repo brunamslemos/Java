@@ -1,0 +1,2 @@
+- Identidade da função é nome e parâmetro, logo, posso ter duas funções de mesmo nome, mas parâmetros diferentes;
+- IDE auxilia muito na resolução de contradições;
