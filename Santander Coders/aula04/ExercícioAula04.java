@@ -5,7 +5,7 @@ public class ExercícioAula04 {
 		int k = 3;
 				
 		int [] a = {1,2,3,4,5};
-		int pos = -1;
+		int pos = -1; // cuidado com a posição 0
 		
 		for (int i = 0; i < a.length; i++) {
 			if (k == a[i]) {
