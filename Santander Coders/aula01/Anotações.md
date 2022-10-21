@@ -1,0 +1,2 @@
+- Sempre fechar o scanner;
+- For inicia, verifica, realiza a ação depois aplica o próximo parâmetro
