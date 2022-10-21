@@ -5,6 +5,11 @@ import java.util.Scanner;
 public class Exercício2Aula04 {
 
 	public static void main (String[] args) {
+		resoluçãoIsabella();
+	}
+		
+		
+	public static void resoluçãoAula () {
 		Scanner scan = new Scanner (System.in);
 		final int MAX = 100;
 		int [] numeros = new int [MAX];
@@ -35,4 +40,40 @@ public class Exercício2Aula04 {
 		}
 		scan.close();
 	}
+	
+	public static void resoluçãoIsabella () {
+		int max=100;
+		int [] numeros = new int [max];
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Digite um número: ");
+		int entrada = scan.nextInt();
+		int quantidade=0;
+		
+		for (int i=0; i<=max; i++) {
+			if (entrada!=0) {
+				numeros[i]=entrada;
+				System.out.println("Digite mais um número: ");
+				entrada = scan.nextInt();
+				quantidade++; // quantidade de itens no vetor
+			} else {
+				break;
+			}
+		}
+		scan.close();
+		
+		// o vetor tem quantidade de itens
+		int [] vetorInvertido = new int [quantidade];
+		
+		for (int i=0; i < quantidade; i++) {
+			vetorInvertido[i] = numeros[quantidade-i-1]; //se eu adiciono o zero, ainda que ele seja parada, ele entra pra soma da quantidade. O -1 vem pra tirar ele da posição do vetor.
+			System.out.println(vetorInvertido[i]);
+		}
+		//teste de mesa
+		// i=0, quantidade = 3, por exemplo
+		//numero [3-0-1] = numero [2] = última posição
+		//assim sucessivamente
+	}
+	
 }
