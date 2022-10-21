@@ -1,0 +1,3 @@
+- Void não retorna nada;
+- do-while: executa depois verifica;
+- Se a função retorna, precisa determinar o tipo de retorno.
